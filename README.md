@@ -1,4 +1,4 @@
-# Directory Stack Manager (DSM)
+# Directory Stack Manager (DSM) Version 1.0
 
 Written for Bash shell, this is useful for managing Linux
 directories and easily moving from one directory to another.
@@ -20,7 +20,7 @@ must be alphanumeric characters. Make it a short
 mnemonic. You can omit the key and let DSM auto-create
 it for you. Once you have a key associated with a
 directory, you can use *g* with that key to go to that
-directory (instead of 'cd').
+directory (instead of *cd*).
 
 ## Future Improvements
 
