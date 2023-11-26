@@ -1,15 +1,26 @@
 Directory Stack Manager (DSM)
 
-This is useful for managing Linux directories and easily moving
-from one directory to another.
+Written for Bash shell, this is useful for managing Linux
+directories and easily moving from one directory to another.
 
-c <context>      - load a new context from disk
-cc               - show context comment
-cpx <file>       - copy file into $x
-d                - show current keys/dirs
-dh               - show this help text
-g <key>          - go to directory of key
-lc               - show saved contexts
-pd <dir> [<key>] - push to directory and set its key
-sc <context>     - save context to disk
-x                - sets $x to current directory (see cpx)
+To install, it is recommended you clone DSM in your home
+directory. Then insert this line into your .bash_aliases:
+
+source $HOME/DSM/dsm_env.sh
+
+Then when you start a new Bash shell, you can get help on
+DSM anytime by entering:
+
+dh
+
+This will display DSM commands and descriptions. Instead
+of using 'cd' to change to a new directory, you should now
+use 'pd' and supply a key for that directory. The key
+must be alphanumeric characters. Make it a short
+mnemonic. You can omit the key and let DSM auto-create
+it for you.
+
+Limitations
+
+At present, directories with spaces in their name are
+not supported.
