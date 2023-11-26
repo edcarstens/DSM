@@ -1,4 +1,4 @@
-Directory Stack Manager (DSM)
+# Directory Stack Manager (DSM)
 
 Written for Bash shell, this is useful for managing Linux
 directories and easily moving from one directory to another.
@@ -6,12 +6,12 @@ directories and easily moving from one directory to another.
 To install, it is recommended you clone DSM in your home
 directory. Then insert this line into your .bash_aliases:
 
-source $HOME/DSM/dsm_env.sh
+    source $HOME/DSM/dsm_env.sh
 
 Then when you start a new Bash shell, you can get help on
 DSM anytime by entering:
 
-dh
+    dh
 
 This will display DSM commands and descriptions. Instead
 of using 'cd' to change to a new directory, you should now
@@ -22,9 +22,13 @@ it for you. Once you have a key associated with a
 directory, you can use 'g' with that key to go to that
 directory (instead of 'cd').
 
-Future Improvements
+## Future Improvements
 
-Support directories with spaces in their names.
-Return an ERROR from 'g' if specified key does not exist.
-Support directory history and 'pop' to step back, 'pd' to step forward.
+1. Support directories with spaces in their names.
+2. Return an ERROR from 'g' if specified key does not exist.
+3. Support directory history and 'pop' to step back, 'pd' to step forward.
+
+## Funny Behaviors
+
+1. You can use 'pd' to change the key of an existing dir, but the old key can still be used by 'g' in the same shell. This is because the old key stored as an env var is not unset. To remove it, use 'rmk'.
 
