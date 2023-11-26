@@ -6,7 +6,7 @@ do
     #echo $r
     if [ $r == 0 ]
     then
-        eval xx='$'_$x
+        #eval xx='$'_$x
 	#echo unset _$x
 	eval unset _$x
     fi

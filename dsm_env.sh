@@ -1,4 +1,6 @@
 ## Setup Environment for DSM
+## Add this line to your .bash_aliases file:
+## source $HOME/DSM/dsm_env.sh
 export DSM_INSTALL_PATH="$HOME/DSM"
 export DSM_CONTEXTS="$DSM_INSTALL_PATH/contexts"
 export DSM_DIRS=""
@@ -13,3 +15,5 @@ alias x='x=$PWD'
 cpx() { cp $1 $x ; }
 alias cc='echo $DSM_DESC'
 alias dh='cat $DSM_INSTALL_PATH/README.txt'
+rmk() { test "$#" -lt "1" && echo "ERROR - 1 arg required" && return 100 || DSM_DIRS=`python3 $DSM_INSTALL_PATH/dsm_rmkey.py $1` && eval unset _$1 ; }
+
