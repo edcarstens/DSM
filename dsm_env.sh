@@ -9,7 +9,13 @@ export DSM_CONTEXT=""
 export DSM_KEY="h"
 export DSM_STACK=""
 export _h=$HOME
-PS1="\[\e]0;\$DSM_CONTEXT \$DSM_KEY \w\a\]\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]\$ "
+
+# Chromebook "Linux" Terminal
+#PS1="\[\e]0;\$DSM_CONTEXT \$DSM_KEY \w\a\]\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]\$ "
+
+# Git Bash Terminal
+#PS1="\[\033]0;\$TITLEPREFIX:\$DSM_CONTEXT \$DSM_KEY \$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]\$MSYSTEM \[\033[33m\]\w\[\033[36m\]\`__git_ps1\`\[\033[0m\]\n$ "
+PS1="\[\033]0;\$TITLEPREFIX:\$DSM_CONTEXT \$DSM_KEY \$PWD\007\]\n\[\033[32m\]\h\[\033[35m\] \[\033[33m\]\w\[\033[36m\]\`__git_ps1\`\[\033[0m\]\n$ "
 
 alias lc='ls $DSM_CONTEXTS'
 alias x='x=$PWD'

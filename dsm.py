@@ -194,6 +194,9 @@ class dsm_dirs_Class:
             dirs = []
             cc = ''
             rv = []
+            if (not os.path.isfile(fp)):
+                print('echo DSM:c: Error - Context file not found')
+                return 1
             with open(fp) as file:
                 for line in file:
                     first = line[0]
@@ -203,7 +206,7 @@ class dsm_dirs_Class:
                         rv.append('export _%s=%s' % (k,d))
                     elif (not cc):
                         cc = line ## first comment
-            if (len(cc) < 2):
+            if (len(cc) < 3):
                 cc = '# DSM context file, %s' % (fn)
             rv.append('DSM_CONTEXT="%s"' % (fn))
             rv.append('DSM_DESC="%s"' % (cc))
