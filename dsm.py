@@ -247,6 +247,15 @@ class dsm_dirs_Class:
                 print(' && '.join(rv))
             else:
                 print('echo DSM:rmk: Error - Key not found')
+    def ds(self):
+        idx = 0
+        for d in self.stack:
+            if (self.stackIdx == idx):
+                pre = '> '
+            else:
+                pre = '  '
+            print("%s%s" % (pre,d))
+            idx += 1
 
 dsm_dirs = dsm_dirs_Class()
 cmd = sys.argv[1]
@@ -270,4 +279,5 @@ elif cmd == 'rmk':
     dsm_dirs.rmk(arg1)
 elif cmd == 'k':
     dsm_dirs.k(arg1)
-
+elif cmd == 'ds':
+    dsm_dirs.ds()
