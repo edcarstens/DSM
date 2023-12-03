@@ -9,7 +9,7 @@ export DSM_CONTEXT=""
 export DSM_KEY="h"
 export DSM_STACK=""
 export _h=$HOME
-PS1="\[\e]0;\$DSM_CONTEXT \$DSM_KEY \w\a\]\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]\$"
+PS1="\[\e]0;\$DSM_CONTEXT \$DSM_KEY \w\a\]\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]\$ "
 
 alias lc='ls $DSM_CONTEXTS'
 alias x='x=$PWD'
